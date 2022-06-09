@@ -41,9 +41,10 @@ img {
     grid-auto-flow: row;
     row-gap: 2vh;
     margin-bottom: 4vh;
+    object-fit: cover;
 }
 
-#page-main-section>h1 {
+#page-main>h1 {
     text-align: center;
 }
 
@@ -51,12 +52,7 @@ img {
     text-align: center;
 }
 
-#page-main-img {
-    background-image: url(https://images.pexels.com/photos/5990776/pexels-photo-5990776.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
-    background-position: center;
-    background-size: cover;
-    display: grid;
-    grid-auto-flow: row;
+#page-main-section>img {
     height: 50vh;
 }
 
@@ -67,4 +63,22 @@ img {
     margin-bottom: 5vh;
     align-items: center;
     justify-items: center;
+}
+
+@media only screen and (min-width: 600px) {
+    #page-main-section {
+        display: grid;
+        grid-auto-flow: column;
+    }
+
+    #page-footer-section {
+        display: grid;
+        grid-auto-flow: column;
+        column-gap: 10vw;
+        margin-bottom: 5vh;
+    }
+
+    #page-main-section>p {
+        display: none;
+    }
 }
